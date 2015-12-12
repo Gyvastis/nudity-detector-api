@@ -25,7 +25,7 @@ Example `JSON` response:
 }
 ```
 
-* `nude` - parameter shows how much nudity does the image expose
+* `nude` parameter shows how much nudity does the image expose
 * `minimal` parameter identifies whether the subject in the image is minimally dressed
 
 ### Note
