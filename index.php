@@ -37,13 +37,14 @@ $app->post('/check', function(Slim\Http\Request $request, Slim\Http\Response $re
                 preg_match_all("/([0-9]+\.[0-9]+%)<\/h[0-9]>\s([a-z]+)/i", $image_check_response, $image_check_data, PREG_PATTERN_ORDER);
 
                 if(empty($image_check_data)){
-                    $request_params['message'] = 'Image check failed';
+                    $response_params['message'] = 'Image check failed';
                 }
                 else{
                     $response_params['data'] = [
                         'nude' => $image_check_data[1][0],
                         'minimal' => $image_check_data[1][1]
                     ];
+                    $response_params['message'] = 'Image processed successfully';
                     $response_params['success'] = true;
                 }
 
