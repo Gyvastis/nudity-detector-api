@@ -1,5 +1,5 @@
 {
-    "name": "gyvastis/nudity-detector",
+    "name": "gyvastis/nudity-detector-api",
     "description": "Detects whether the submitted image contains nudity.",
     "type": "api",
     "authors": [
