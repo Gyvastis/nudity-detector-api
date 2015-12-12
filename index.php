@@ -15,7 +15,6 @@ $app->post('/check', function(Slim\Http\Request $request, Slim\Http\Response $re
 
         if(empty($request_params)){
             $response_params['message'] = 'No parameters supplied';
-
         }
         else if(! isset($request_params['url']) || empty($request_params['url'])){
             $response_params['message'] = 'Image URL parameter missing';
@@ -34,9 +33,10 @@ $app->post('/check', function(Slim\Http\Request $request, Slim\Http\Response $re
             }
             else {
                 $image_check_response = strtolower($curl->response);
-                preg_match_all("/([0-9]+\.[0-9]+%)<\/h[0-9]>\s([a-z]+)/i", $image_check_response, $image_check_data, PREG_PATTERN_ORDER);
+                $curl->close();
+                $image_check = preg_match_all("/([0-9]+\.[0-9]+%)<\/h[0-9]>\s([a-z]+)/i", $image_check_response, $image_check_data, PREG_PATTERN_ORDER);
 
-                if(empty($image_check_data)){
+                if( ! $image_check){
                     $response_params['message'] = 'Image check failed';
                 }
                 else{
@@ -49,7 +49,6 @@ $app->post('/check', function(Slim\Http\Request $request, Slim\Http\Response $re
                 }
 
             }
-            $curl->close();
         }
 
         return $response->write(json_encode($response_params))->withHeader(
