@@ -1,0 +1,15 @@
+{
+    "name": "gyvastis/nudity-detector",
+    "description": "Detects whether the submitted image contains nudity.",
+    "type": "api",
+    "authors": [
+        {
+            "name": "Vaidas",
+            "email": "shibalba1@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "curl/curl": "^1.2"
+    }
+}
