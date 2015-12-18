@@ -30,3 +30,7 @@ Example `JSON` response:
 
 ### Note
 Use this at your own risk, as it depends on a third party. Consider using a proxy too.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Gyvastis/nudity-detector-api/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
