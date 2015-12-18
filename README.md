@@ -2,11 +2,15 @@
 Detects whether the submited image contains nudity.
 
 ## Usage
-Install composer components `composer install`
+`$ git clone https://github.com/Gyvastis/nudity-detector-api.git`
+
+`$ cd nudity-detector-api`
+
+`$ composer install`
 
 Request must be in `application/json`
 
-Example `POST` request to `http://yourawesomehost.com/nudity-detector/check` with the image url you want to check:
+Example `POST` request to `http://yourawesomehost.com/nudity-detector-api/check` with the image url you want to check:
 ```json
 {
     "url":"https://pbs.twimg.com/media/CS9FQg8UsAAwybp.jpg"
